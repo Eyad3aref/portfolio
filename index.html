@@ -62,7 +62,6 @@
                 <div class="hero-image-container scroll-reveal">
                     <div class="avatar-dynamic-circle">
                         <div class="moving-bg-circle"></div>
-                        <!-- FIX: Use a single valid file path -->
                         <img src="my-photo2.png" alt="Eiad 3aref" class="profile-avatar-img">
                     </div>
                 </div>
@@ -105,7 +104,6 @@
                         <div class="image-wrapper">
                             <div class="about-dynamic-circle">
                                 <div class="about-moving-bg"></div>
-                                <!-- FIX: Use a single valid file path -->
                                 <img src="my-photo2.png" alt="Eiad 3aref" class="about-avatar-img">
                             </div>
                         </div>
@@ -271,7 +269,7 @@
                             <h3>Interactive Social Media Graphic</h3>
                             <p>A premium 1:1 square engagement post designed for Mr. Elnagar. Features high-end photo manipulation, rich neon lighting, and cinematic library background tailored to boost student interaction.</p>
                         </div>
-                    </div> <!-- FIX: Explicitly closed this project card container -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -467,7 +465,7 @@
 
             revealElements.forEach(element => revealObserver.observe(element));
 
-            // 5. Optimization: Before & After Slider Support (Handles 'input' and legacy 'change')
+            // 5. Optimized Before & After Slider (Supports Input + Change)
             document.querySelectorAll('.thumbnail-slider-wrapper').forEach(slider => {
                 const input = slider.querySelector('.slider-input');
                 const beforeWrapper = slider.querySelector('.img-before-wrapper');
