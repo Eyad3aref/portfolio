@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <!-- 🟢 [تم الإضافة]: زرار واتساب عائم احترافي لمنع الزحمة في الـ Hero -->
+    <!-- Floating WhatsApp CTA -->
     <a href="https://wa.me/201037354080" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp" style="position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 9999; transition: all 0.3s ease;">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -26,7 +26,7 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Thumbnails</a>
-                <a href="#edu-posters" class="nav-link">Edu Posters</a> <!-- تحديث الاسم هنا -->
+                <a href="#edu-posters" class="nav-link">Edu Posters</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -55,7 +55,6 @@
                         Creative graphic designer specialized in high-conversion YouTube thumbnails, strategic social media graphics, and advanced photo manipulation. Transforming video concepts and brand identities into high-energy, unclickable visual experiences that instantly boost CTR and engagement.
                     </p>
                     <div class="hero-buttons" style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-                        <!-- 🎯 الأزرار الرئيسية جنب بعضها بشكل منظم جداً وبدون زحمة الواتساب -->
                         <a href="#projects" class="btn btn-primary">View Thumbnails <i class="fas fa-arrow-right"></i></a>
                         <a href="#edu-posters" class="btn btn-secondary" style="background: transparent; border: 2px solid var(--primary-color, #ff4a57); color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;"><i class="fas fa-graduation-cap"></i> Edu Posters</a>
                     </div>
@@ -63,7 +62,8 @@
                 <div class="hero-image-container scroll-reveal">
                     <div class="avatar-dynamic-circle">
                         <div class="moving-bg-circle"></div>
-                        <img src="my-photo.jpg/my-photo2.png" alt="Eiad 3aref" class="profile-avatar-img">
+                        <!-- FIX: Use a single valid file path -->
+                        <img src="my-photo2.png" alt="Eiad 3aref" class="profile-avatar-img">
                     </div>
                 </div>
             </div>
@@ -105,7 +105,8 @@
                         <div class="image-wrapper">
                             <div class="about-dynamic-circle">
                                 <div class="about-moving-bg"></div>
-                                <img src="my-photo.jpg/my-photo2.png" alt="Eiad 3aref" class="about-avatar-img">
+                                <!-- FIX: Use a single valid file path -->
+                                <img src="my-photo2.png" alt="Eiad 3aref" class="about-avatar-img">
                             </div>
                         </div>
                     </div>
@@ -153,7 +154,6 @@
             </div>
         </section>
 
-        <!-- [قسم 1]: تصاميم اليوتيوب العامة والجيمنج (بيفور وأفتر) -->
         <section id="projects" class="projects-section section-padding">
             <div class="container">
                 <div class="section-header scroll-reveal">
@@ -244,7 +244,6 @@
             </div>
         </section>
 
-<!-- 🎯 [قسم 2]: قسم البوسترات التعليمية للمدرسين (عرض بوسترات بمقاسات مخصصة) -->
         <section id="edu-posters" class="projects-section section-padding" style="border-top: 1px solid rgba(255,255,255,0.05);">
             <div class="container">
                 <div class="section-header scroll-reveal">
@@ -252,8 +251,6 @@
                 </div>
 
                 <div class="projects-grid">
-                    
-                    <!-- 1️⃣ كارت بوستر المدرس الأول بمقاس 1080x1350 -->
                     <div class="project-card scroll-reveal">
                         <div style="width: 100%; aspect-ratio: 1080 / 1350; overflow: hidden; background-color: #0d1621;">
                             <img src="elnagar/اماكن تواجدنا.png" alt="Educational Poster 1080x1350" style="width: 100%; height: 100%; object-fit: cover;">
@@ -263,8 +260,8 @@
                             <h3>Premium Educational Poster</h3>
                             <p>Social media launch poster designed for Mr. Elnagar, optimizing space and lighting.</p>
                         </div>
-                                        </div> 
-                    <!-- 2️⃣ كارت التصميم الثاني بمقاس 3000x3000 (مربع عالي الجودة) -->
+                    </div> 
+
                     <div class="project-card scroll-reveal">
                         <div style="width: 100%; aspect-ratio: 3000 / 3000; overflow: hidden; background-color: #0d1621;">
                             <img src="elnagar/eln.png" alt="Social Media Engagement Design" style="width: 100%; height: 100%; object-fit: cover;">
@@ -274,10 +271,11 @@
                             <h3>Interactive Social Media Graphic</h3>
                             <p>A premium 1:1 square engagement post designed for Mr. Elnagar. Features high-end photo manipulation, rich neon lighting, and cinematic library background tailored to boost student interaction.</p>
                         </div>
-</div>
+                    </div> <!-- FIX: Explicitly closed this project card container -->
                 </div>
             </div>
         </section>
+
         <section id="experience" class="experience-section section-padding">
             <div class="container">
                 <div class="section-header scroll-reveal">
@@ -400,7 +398,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. Theme Toggle
+            // 1. Theme Toggle Logic
             const themeToggleBtn = document.getElementById('themeToggle');
             const htmlElement = document.documentElement;
             const themeIcon = themeToggleBtn.querySelector('i');
@@ -437,7 +435,7 @@
                 });
             });
 
-            // 3. Active Anchor Highlight
+            // 3. Active Anchor Link Highlight
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
 
@@ -456,7 +454,7 @@
                 });
             });
 
-            // 4. Scroll Reveal
+            // 4. Intersection Observer Scroll Reveal
             const revealElements = document.querySelectorAll('.scroll-reveal');
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -469,17 +467,19 @@
 
             revealElements.forEach(element => revealObserver.observe(element));
 
-            // 5. Before & After Slider
+            // 5. Optimization: Before & After Slider Support (Handles 'input' and legacy 'change')
             document.querySelectorAll('.thumbnail-slider-wrapper').forEach(slider => {
                 const input = slider.querySelector('.slider-input');
                 const beforeWrapper = slider.querySelector('.img-before-wrapper');
                 const handle = slider.querySelector('.slider-handle');
 
-                input.addEventListener('input', (e) => {
-                    const value = e.target.value;
+                const updateSliderPosition = (value) => {
                     beforeWrapper.style.width = value + '%';
                     handle.style.left = value + '%';
-                });
+                };
+
+                input.addEventListener('input', (e) => updateSliderPosition(e.target.value));
+                input.addEventListener('change', (e) => updateSliderPosition(e.target.value));
             });
         });
     </script>
